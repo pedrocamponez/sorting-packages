@@ -17,19 +17,20 @@ def sort(width: float, height: float, length: float, mass: float) -> str:
 
     The function returns a string.
     """
-    if (width * height * length >= MAX_VOLUME) or (width >= MAX_DIMENSION) or (height >= MAX_DIMENSION) or (length >= MAX_DIMENSION):
-        print("bulky")
-        if mass >= MAX_MASS:
-            print("bulky AND heavy")
-            return REJECTED
-        else:
-            print("bulky AND light")
-            return SPECIAL
+    inputs = {"width": width, "height": height, "length": length, "mass": mass}
+    for key, value in inputs.items():
+        if not isinstance(value, (int, float)):
+            raise TypeError(f"{key} must be a number")
+        if value <= 0:
+            raise ValueError(f"{key} must be greater than 0")
+    
+    is_bulky = width * height * length >= MAX_VOLUME or width >= MAX_DIMENSION or height >= MAX_DIMENSION or length >= MAX_DIMENSION
+
+    is_heavy = mass >= MAX_MASS
+
+    if is_bulky and is_heavy:
+        return REJECTED
+    elif is_bulky or is_heavy:
+        return SPECIAL
     else:
-        print("not bulky, not rejected")
-        if mass >= MAX_MASS:
-            print("heavy")
-            return SPECIAL
-        else:
-            print("not bulky, not heavy")
-            return STANDARD
+        return STANDARD
