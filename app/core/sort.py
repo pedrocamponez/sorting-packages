@@ -1,4 +1,4 @@
-from core.consts import MAX_VOLUME, MAX_DIMENSION, MAX_MASS, STANDARD, SPECIAL, REJECTED
+from app.core.consts import MAX_VOLUME, MAX_DIMENSION, MAX_MASS, STANDARD, SPECIAL, REJECTED
 
 
 def sort(width: float, height: float, length: float, mass: float) -> str:
