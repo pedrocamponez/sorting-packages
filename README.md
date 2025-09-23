@@ -1,13 +1,31 @@
 # sorting-packages
 This repository is responsible for hosting the sorting packages function.
 
-Clone this repository, and follow the steps.
+Project structure:
+sorting-packages/
+├── app/
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── consts.py
+│   │   └── sort.py
+│   └── tests/
+│       ├── __init__.py
+│       └── test_sort.py
+├── .gitignore
+├── README.md
+└── venv/
 
 To run the code:
-    - First make sure you have Python installed - preferably 3.11.9
-    - Then, create a virtual environment (venv) by using the command ```python3 -m venv venv```
-    - After that, make sure you are in the root of the project (```sorting-packages```). If not, you can type ```cd sorting-packages``` from the folder you cloned the repo into.
-    - Once everything is set, you can run the tests by using the command ```python3 -m unittest app.tests.test_sort -v```
+    - First make sure you have Python installed - preferably 3.11.9 to avoid conflicts (this version was used when developing this project)
+    - Clone this repository:
+        ```git clone https://github.com/seu-usuario/sorting-packages.git```
+        ```cd sorting-packages```
+    - Then, create a virtual environment (venv) and activate it:
+        ```python3 -m venv venv``` - to create
+        ```source venv/bin/activate  # macOS/Linux```
+        ```venv\Scripts\activate   # Windows```
+    - Once everything is set, you can run the tests:
+        ```python3 -m unittest app.tests.test_sort -v```
 
     You should see an output like this:
     ```
