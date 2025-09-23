@@ -2,6 +2,7 @@
 This repository is responsible for hosting the sorting packages function, which classifies the packages in different categories (STANDARD, SPECIAL, REJECTED) based on volume, dimension and mass.
 
 Project structure:
+```
 sorting-packages/
 ├── app/
 │   ├── core/
@@ -14,6 +15,7 @@ sorting-packages/
 ├── .gitignore
 ├── README.md
 └── venv/
+```
 
 To run the code:
     - First make sure you have Python installed - preferably 3.11.9 to avoid conflicts (this version was used when developing this project)
