@@ -1,3 +1,6 @@
+from core.consts import MAX_VOLUME, MAX_DIMENSION, MAX_MASS, STANDARD, SPECIAL, REJECTED
+
+
 def sort(width: float, height: float, length: float, mass: float) -> str:
     """
     This function sorts packages based on their dimensions and mass, classifying them into one of the following categories:
@@ -14,19 +17,19 @@ def sort(width: float, height: float, length: float, mass: float) -> str:
 
     The function returns a string.
     """
-    if (width * height * length >= 1000000) or (width >= 150) or (height >= 150) or (length >= 150):
+    if (width * height * length >= MAX_VOLUME) or (width >= MAX_DIMENSION) or (height >= MAX_DIMENSION) or (length >= MAX_DIMENSION):
         print("bulky")
-        if mass >= 20:
+        if mass >= MAX_MASS:
             print("bulky AND heavy")
-            return "REJECTED"
+            return REJECTED
         else:
             print("bulky AND light")
-            return "SPECIAL"
+            return SPECIAL
     else:
         print("not bulky, not rejected")
-        if mass >= 20:
+        if mass >= MAX_MASS:
             print("heavy")
-            return "SPECIAL"
+            return SPECIAL
         else:
             print("not bulky, not heavy")
-            return "STANDARD"
+            return STANDARD
