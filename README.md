@@ -23,14 +23,14 @@ sorting-packages/
 ### To run the code:
 1. First make sure you have Python installed - preferably 3.11.9 to avoid conflicts (this version was used when developing this project)
 2. Clone this repository:
-    ```git clone https://github.com/seu-usuario/sorting-packages.git```
-    ```cd sorting-packages```
+    2.1. ```git clone https://github.com/seu-usuario/sorting-packages.git```
+    2.2. ```cd sorting-packages```
 3. Then, create a virtual environment (venv) and activate it:
-    ```python3 -m venv venv``` - to create
-    ```source venv/bin/activate  # macOS/Linux```
-    ```venv\Scripts\activate   # Windows```
+    3.1. ```python3 -m venv venv```
+    3.2. ```source venv/bin/activate  # macOS/Linux```
+    3.3. ```venv\Scripts\activate   # Windows```
 4. Once everything is set, you can run the tests:
-    ```python3 -m unittest app.tests.test_sort -v```
+    4.1. ```python3 -m unittest app.tests.test_sort -v```
 
 5. You should see an output like this:
 ```
