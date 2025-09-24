@@ -29,10 +29,18 @@ sorting-packages/
     3.1. ```python3 -m venv venv```
     3.2. ```source venv/bin/activate  # macOS/Linux```
     3.3. ```venv\Scripts\activate   # Windows```
-4. Once everything is set, you can run the tests:
-    4.1. ```python3 -m unittest app.tests.test_sort -v```
+4. Once everything is set, you can run the application and tests:
+    4.1. ```python3 main.py```
+    4.2. ```python3 -m unittest app.tests.test_sort -v```
 
-5. You should see an output like this:
+5. You should see an output like this for the application:
+```
+    === Package Sorting Interface ===
+    Enter package dimensions and mass to classify your package.
+    Categories: STANDARD, SPECIAL, or REJECTED
+```
+
+6. You should see an output like this for the tests:
 ```
     test_bulky_by_dimension (app.tests.test_sort.TestSortFunction.test_bulky_by_dimension) ... ok
     test_bulky_by_volume (app.tests.test_sort.TestSortFunction.test_bulky_by_volume) ... ok
